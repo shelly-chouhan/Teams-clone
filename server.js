@@ -28,12 +28,7 @@ io.on('connection', socket =>{
             io.to(roomId).emit('createMessage',message)
         })
     })
-    socket.on("screen-data", function(data) {
-        data = JSON.parse(data);
-        var room = data.room;
-        var imgStr = data.image;
-        socket.broadcast.to(room).emit('screen-data', imgStr);
-    })
+    
 })
 
 server.listen(process.env.PORT || 3030);
