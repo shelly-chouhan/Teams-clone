@@ -38,13 +38,13 @@
                     <i class="fas fa-video"></i>
                     <span>Stop Video</span>
                 </div>
-                <span>Screen Recording</span>
-                    <button id="start">
-                        Start Recording
-                      </button>
-                      <button id="stop" disabled>
-                        Stop Recording
-                      </button>
+                <button id="shareScreen">Capture Screen</button>
+<button id="rec" disabled>Record</button>
+<button id="stop" disabled>Stop</button>
+<a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
+<div id="error"></div>
+                <!-- <button id="startshare">Start Sharing</button>
+                <button id="stopshare">Stop Sharing</button> -->
             </div>
             <div class = "main__controls__block">
                 <div class="main__controls__button">
@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class = "main__controls__block">
-                <div class="main__controls__button">
+                <div onclick="javascript:window.close()" class="leave__button">
                     <i class="fas fa-sign-out-alt"></i>
                     <span class="leave_meeting">Leave meeting</span>
                 </div>
@@ -71,6 +71,8 @@
     </div>
     <div class ="main__right">
         <div class="main__header">
+            <video width="320" height="240" autoplay></video>
+            <!-- <video id="videostream" width="800" height="680" autoplay></video> -->
             <h6>Chat</h6>
         </div>
         <div class = "main__chat_window">
